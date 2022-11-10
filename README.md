@@ -18,3 +18,28 @@ Considere a seguinte descrição e o diagrama ER abaixo:
 No hospital, as internações têm sido registradas por meio de formulários eletrônicos que gravam os dados em arquivos. Para cada internação, são anotadas a data de entrada, a data prevista de alta e a data efetiva de alta, além da descrição textual dos procedimentos a serem realizados. As internações precisam ser vinculadas a quartos, com a numeração e o tipo. Cada tipo de quarto tem sua descrição e o seu valor diário (a princípio, o hospital trabalha com apartamentos, quartos duplos e enfermaria). Também é necessário controlar quais profissionais de enfermaria estarão responsáveis por acompanhar o paciente durante sua internação. Para cada enfermeiro(a), é necessário nome, CPF e registro no conselho de enfermagem (CRE). A internação, obviamente, é vinculada a um paciente – que pode se internar mais de uma vez no hospital – e a um único médico responsável.
 
 ![image](https://user-images.githubusercontent.com/88636833/197580421-80d1756d-0fdf-4bf5-a338-20908be61d36.png)
+
+# Parte 3
+A proposta agora é criar um script e inserir os seguintes dados:
+
+Inclua ao menos dez médicos e ao menos sete especialidades (considere a afirmação de que “entre as especialidades há pediatria, clínica geral, gastroenterologia e dermatologia”).
+
+Inclua ao menos 15 pacientes.
+
+Registre 20 consultas de diferentes pacientes e diferentes médicos (alguns pacientes realizam mais que uma consulta). As consultas devem ter ocorrido entre 01/01/2015 e 01/01/2022. Ao menos dez consultas devem ter receituário com dois ou mais medicamentos.
+
+Inclua ao menos quatro convênios médicos, associe ao menos cinco pacientes e cinco consultas.
+Criar entidade de relacionamento entre médico e especialidade. 
+Criar Entidade de Relacionamento entre internação e enfermeiro. 
+Arrumar a chave estrangeira do relacionamento entre convênio e médico.
+Criar entidade entre internação e enfermeiro.
+
+Colocar chaves estrangeira dentro da internação (Chaves Médico e Paciente).
+
+Registre ao menos sete internações. Pelo menos dois pacientes devem ter se internado mais de uma vez. Ao menos três quartos devem ser cadastrados. As internações devem ter ocorrido entre 01/01/2015 e 01/01/2022.
+
+Considerando que “a princípio o hospital trabalha com apartamentos, quartos duplos e enfermaria”, inclua ao menos esses três tipos com valores diferentes.
+
+Inclua dados de dez profissionais de enfermaria. Associe cada internação a ao menos dois enfermeiros.
+
+Os dados de tipo de quarto, convênio e especialidade são essenciais para a operação do sistema e, portanto, devem ser povoados assim que o sistema for instalado.
