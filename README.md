@@ -37,14 +37,14 @@ A proposta agora é criar um script e inserir os seguintes dados:
 - Inclua dados de dez profissionais de enfermaria. Associe cada internação a ao menos dois enfermeiros.
 - Os dados de tipo de quarto, convênio e especialidade são essenciais para a operação do sistema e, portanto, devem ser povoados assim que o sistema for instalado.
 
-[link](https://github.com/Diogo-Javax888/modelagem_hospital/blob/main/Hospital_Fundamental.sql')Ver o script
+[Ver o script](https://github.com/Diogo-Javax888/modelagem_hospital/blob/main/Hospital_Fundamental.sql')
 
 # Parte 4 - A Ordem do Alterar.
-Não... Não acabou... 
+Não... Não acabou...
 Um banco de dados pode sofrer alterações ao longo da sua concepção e do seu desenvolvimento. Nesse momento devemos nos preparar para atualizar nossas estratégias.
 
 Pensando no banco que já foi criado para o Projeto do Hospital, realize algumas alterações nas tabelas e nos dados usando comandos de atualização e exclusão:
 - Crie um script que adicione uma coluna “em_atividade” para os médicos, indicando se ele ainda está atuando no hospital ou não. 
 - Crie um script para atualizar ao menos dois médicos como inativos e os demais em atividade.
 
-[link](https://github.com/Diogo-Javax888/modelagem_hospital/blob/main/Hospital_Fundamental.sql')Ver o script
+[Ver o script](https://github.com/Diogo-Javax888/modelagem_hospital/blob/main/Hospital_Fundamental.sql')
