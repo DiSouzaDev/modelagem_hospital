@@ -1,4 +1,5 @@
 # modelagem_hospital
+# Parte 1 - O Hospital fundamental
 Analise a seguinte descrição e extraia dela os requisitos para o banco de dados:
 
 O hospital necessita de um sistema para sua área clínica que ajude a controlar consultas realizadas. Os médicos podem ser generalistas, especialistas ou residentes e têm seus dados pessoais cadastrados em planilhas digitais. Cada médico pode ter uma ou mais especialidades, que podem ser pediatria, clínica geral, gastroenterologia e dermatologia. Alguns registros antigos ainda estão em formulário de papel, mas será necessário incluir esses dados no novo sistema.
@@ -10,7 +11,7 @@ As consultas também têm sido registradas em planilhas, com data e hora de real
 Deseja-se ainda informatizar a receita do médico, de maneira que, no encerramento da consulta, ele possa registrar os medicamentos receitados, a quantidade e as instruções de uso. A partir disso, espera-se que o sistema imprima um relatório da receita ao paciente ou permita sua visualização via internet.
 ![image](https://user-images.githubusercontent.com/88636833/197365179-952545a2-5c1e-4308-a2f7-a98721a49d9f.png)
 
-# Parte 2
+# Parte 2 - Os segredos do hospital
 A proposta de modelagem foi aprofundada inserindo novos campos e especificando os atributos das entidades.
 
 Considere a seguinte descrição e o diagrama ER abaixo:
@@ -19,7 +20,7 @@ No hospital, as internações têm sido registradas por meio de formulários ele
 
 ![image](https://user-images.githubusercontent.com/88636833/197580421-80d1756d-0fdf-4bf5-a338-20908be61d36.png)
 
-# Parte 3
+# Parte 3 - O prisioneiro dos dados
 A proposta agora é criar um script e inserir os seguintes dados:
 
 - Inclua ao menos dez médicos e ao menos sete especialidades (considere a afirmação de que “entre as especialidades há pediatria, clínica geral, gastroenterologia e dermatologia”).
@@ -35,3 +36,15 @@ A proposta agora é criar um script e inserir os seguintes dados:
 - Considerando que “a princípio o hospital trabalha com apartamentos, quartos duplos e enfermaria”, inclua ao menos esses três tipos com valores diferentes.
 - Inclua dados de dez profissionais de enfermaria. Associe cada internação a ao menos dois enfermeiros.
 - Os dados de tipo de quarto, convênio e especialidade são essenciais para a operação do sistema e, portanto, devem ser povoados assim que o sistema for instalado.
+
+![link](https://github.com/Diogo-Javax888/modelagem_hospital/blob/main/Hospital_Fundamental.sql')Ver o script
+
+# Parte 4 - A Ordem do Alterar.
+Não... Não acabou... 
+Um banco de dados pode sofrer alterações ao longo da sua concepção e do seu desenvolvimento. Nesse momento devemos nos preparar para atualizar nossas estratégias.
+
+Pensando no banco que já foi criado para o Projeto do Hospital, realize algumas alterações nas tabelas e nos dados usando comandos de atualização e exclusão:
+- Crie um script que adicione uma coluna “em_atividade” para os médicos, indicando se ele ainda está atuando no hospital ou não. 
+- Crie um script para atualizar ao menos dois médicos como inativos e os demais em atividade.
+
+![link](https://github.com/Diogo-Javax888/modelagem_hospital/blob/main/Hospital_Fundamental.sql')Ver o script
