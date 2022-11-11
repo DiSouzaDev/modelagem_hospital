@@ -132,6 +132,31 @@ alter table Internacao add foreign key(id_procedimento) references Procedimento(
 alter table Quarto add foreign key (id_tipo) references tipo_quarto(id_tipo);
 alter table Quarto add foreign key (id_enfermeiro) references Enfermeiro(id_enfermeiro);
 
+-- Alteração na tabela Medicos
+alter table Medico add em_atividade varchar(50);
+update Medico set em_atividade = 'Férias' where id_medico = 1;
+update Medico set em_atividade = 'Ativo' where id_medico = 2;
+update Medico set em_atividade = 'Ativo' where id_medico = 3;
+update Medico set em_atividade = 'Ativo' where id_medico = 4;
+update Medico set em_atividade = 'Férias' where id_medico = 5;
+update Medico set em_atividade = 'Ativo' where id_medico = 6;
+update Medico set em_atividade = 'Ativo' where id_medico = 7;
+update Medico set em_atividade = 'Ativo' where id_medico = 8;
+update Medico set em_atividade = 'Ativo' where id_medico = 9;
+update Medico set em_atividade = 'Ativo' where id_medico = 10;
+update Medico set em_atividade = 'Ativo' where id_medico = 11;
+update Medico set em_atividade = 'Ativo' where id_medico = 12;
+update Medico set em_atividade = 'Ativo' where id_medico = 13;
+update Medico set em_atividade = 'Ativo' where id_medico = 14;
+update Medico set em_atividade = 'Ativo' where id_medico = 15;
+update Medico set em_atividade = 'Ativo' where id_medico = 16;
+update Medico set em_atividade = 'Ativo' where id_medico = 17;
+update Medico set em_atividade = 'Ativo' where id_medico = 18;
+update Medico set em_atividade = 'Ativo' where id_medico = 19;
+update Medico set em_atividade = 'Ativo' where id_medico = 20;
+update Medico set em_atividade = 'Ativo' where id_medico = 21;
+update Medico set em_atividade = 'Ativo' where id_medico = 22;
+
 -- select * from Especialidades;
 insert into Especialidades values (1, 'Pediatria', 7000.00, 13000.00),
 (2, 'Clínica Geral', 7900.00, 13800.00),
