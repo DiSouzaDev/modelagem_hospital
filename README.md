@@ -9,6 +9,7 @@ Os pacientes também precisam de cadastro, contendo dados pessoais (nome, data d
 As consultas também têm sido registradas em planilhas, com data e hora de realização, médico responsável, paciente, valor da consulta ou nome do convênio, com o número da carteira. Também é necessário indicar na consulta qual a especialidade buscada pelo paciente.
 
 Deseja-se ainda informatizar a receita do médico, de maneira que, no encerramento da consulta, ele possa registrar os medicamentos receitados, a quantidade e as instruções de uso. A partir disso, espera-se que o sistema imprima um relatório da receita ao paciente ou permita sua visualização via internet.
+
 ![image](https://user-images.githubusercontent.com/88636833/197365179-952545a2-5c1e-4308-a2f7-a98721a49d9f.png)
 
 # Parte 2 - Os segredos do hospital
@@ -37,7 +38,7 @@ A proposta agora é criar um script e inserir os seguintes dados:
 - Inclua dados de dez profissionais de enfermaria. Associe cada internação a ao menos dois enfermeiros.
 - Os dados de tipo de quarto, convênio e especialidade são essenciais para a operação do sistema e, portanto, devem ser povoados assim que o sistema for instalado.
 
-[Ver o script](https://github.com/Diogo-Javax888/modelagem_hospital/blob/main/Hospital_Fundamental.sql')
+[Ver o script](https://github.com/Diogo-Javax888/modelagem_hospital/blob/main/Hospital_Fundamental.sql)
 
 # Parte 4 - A Ordem do Alterar.
 Não... Não acabou...
@@ -47,4 +48,4 @@ Pensando no banco que já foi criado para o Projeto do Hospital, realize algumas
 - Crie um script que adicione uma coluna “em_atividade” para os médicos, indicando se ele ainda está atuando no hospital ou não. 
 - Crie um script para atualizar ao menos dois médicos como inativos e os demais em atividade.
 
-[Ver o script](https://github.com/Diogo-Javax888/modelagem_hospital/blob/main/Hospital_Fundamental.sql')
+[Ver o script](https://github.com/Diogo-Javax888/modelagem_hospital/blob/main/Hospital_Fundamental.sql)
