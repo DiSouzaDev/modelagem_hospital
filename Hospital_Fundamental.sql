@@ -1,6 +1,6 @@
-create database Hospital
-
-use Hospital;
+-- drop database hospital
+-- create database Hospital
+-- use Hospital;
 
 create table Pacientes (
  id_paciente int auto_increment primary key,
@@ -40,8 +40,8 @@ create table Consulta (
  id_paciente int not null,
  data_consulta date not null,
  hora_consulta time not null,
- id_convenio int not null,
- id_receita int not null default 000
+ id_convenio int default 0,
+ id_receita int default 0
 );
 
 create table Receita (
@@ -131,31 +131,6 @@ alter table Internacao add foreign key(id_procedimento) references Procedimento(
 -- Quarto
 alter table Quarto add foreign key (id_tipo) references tipo_quarto(id_tipo);
 alter table Quarto add foreign key (id_enfermeiro) references Enfermeiro(id_enfermeiro);
-
--- Alteração na tabela Medicos
-alter table Medico add em_atividade varchar(50);
-update Medico set em_atividade = 'Férias' where id_medico = 1;
-update Medico set em_atividade = 'Ativo' where id_medico = 2;
-update Medico set em_atividade = 'Ativo' where id_medico = 3;
-update Medico set em_atividade = 'Ativo' where id_medico = 4;
-update Medico set em_atividade = 'Férias' where id_medico = 5;
-update Medico set em_atividade = 'Ativo' where id_medico = 6;
-update Medico set em_atividade = 'Ativo' where id_medico = 7;
-update Medico set em_atividade = 'Ativo' where id_medico = 8;
-update Medico set em_atividade = 'Ativo' where id_medico = 9;
-update Medico set em_atividade = 'Ativo' where id_medico = 10;
-update Medico set em_atividade = 'Ativo' where id_medico = 11;
-update Medico set em_atividade = 'Ativo' where id_medico = 12;
-update Medico set em_atividade = 'Ativo' where id_medico = 13;
-update Medico set em_atividade = 'Ativo' where id_medico = 14;
-update Medico set em_atividade = 'Ativo' where id_medico = 15;
-update Medico set em_atividade = 'Ativo' where id_medico = 16;
-update Medico set em_atividade = 'Ativo' where id_medico = 17;
-update Medico set em_atividade = 'Ativo' where id_medico = 18;
-update Medico set em_atividade = 'Ativo' where id_medico = 19;
-update Medico set em_atividade = 'Ativo' where id_medico = 20;
-update Medico set em_atividade = 'Ativo' where id_medico = 21;
-update Medico set em_atividade = 'Ativo' where id_medico = 22;
 
 -- select * from Especialidades;
 insert into Especialidades values (1, 'Pediatria', 7000.00, 13000.00),
@@ -310,6 +285,7 @@ insert into Consulta value (1, 210.00, 19, 1, '2022-02-05', '09:00:00', 1, 1),
 (18, 189.00, 4, 3, '2022-02-05', '20:00:00', 18, 18),
 (19, 160.00, 15, 14, '2022-02-05', '10:00:00', 19, 19),
 (20, 164.00, 8, 9, '2022-02-05', '18:00:00', 20, 20);
+-- insert into Consulta (id_consulta, valor_consulta, id_medico, id_paciente, data_consulta, hora_consulta) value (21, 287.00, 9, 10, '2022-08-25', '09:00:00'), (22, 287.00, 10, 8, '2022-08-25', '09:00:00');
 
 -- select * from Internacao;
 insert into Internacao values (1, 3, 3, 1, '2022-02-05', '2022-02-10', '2022-02-10', 'Paciente apresentou melhora total'),
@@ -319,3 +295,118 @@ insert into Internacao values (1, 3, 3, 1, '2022-02-05', '2022-02-10', '2022-02-
 (5, 11, 5, 3, '2022-02-05', '2022-03-25', '2022-05-20', 'Paciente recebeu alta e permanecerá em acompanhamento medico'),
 (6, 1, 2, 3, '2022-02-05', '2022-04-14', '2022-04-28', 'Paciente apresentou melhora parcial e permanecerá em acompanhamento medico'),
 (7, 20, 4, 2, '2022-02-05', '2022-03-03', '2022-03-03', 'Paciente apresentou melhora total');
+
+-- Alteração tabela Medicos add crm_medico
+alter table Medico add crm_medico varchar(8);
+update Medico set crm_medico = '056984SP' where id_medico = 1;
+update Medico set crm_medico = '916782SP' where id_medico = 2;
+update Medico set crm_medico = '496301SP' where id_medico = 3;
+update Medico set crm_medico = '348961SP' where id_medico = 4;
+update Medico set crm_medico = '591203SP' where id_medico = 5;
+update Medico set crm_medico = '866017SP' where id_medico = 6;
+update Medico set crm_medico = '965521SP' where id_medico = 7;
+update Medico set crm_medico = '996504SP' where id_medico = 8;
+update Medico set crm_medico = '326587SP' where id_medico = 9;
+update Medico set crm_medico = '982147SP' where id_medico = 10;
+update Medico set crm_medico = '962571SP' where id_medico = 11;
+update Medico set crm_medico = '018654SP' where id_medico = 12;
+update Medico set crm_medico = '754213SP' where id_medico = 13;
+update Medico set crm_medico = '648272SP' where id_medico = 14;
+update Medico set crm_medico = '082736SP' where id_medico = 15;
+update Medico set crm_medico = '980132SP' where id_medico = 16;
+update Medico set crm_medico = '275831SP' where id_medico = 17;
+update Medico set crm_medico = '615486SP' where id_medico = 18;
+update Medico set crm_medico = '345768SP' where id_medico = 19;
+update Medico set crm_medico = '910255SP' where id_medico = 20;
+update Medico set crm_medico = '010205SP' where id_medico = 21;
+update Medico set crm_medico = '946130SP' where id_medico = 22;
+
+-- Alteração na tabela Medicos add em_atividade
+alter table Medico add em_atividade varchar(50);
+update Medico set em_atividade = 'Férias' where id_medico = 1;
+update Medico set em_atividade = 'Ativo' where id_medico = 2;
+update Medico set em_atividade = 'Ativo' where id_medico = 3;
+update Medico set em_atividade = 'Ativo' where id_medico = 4;
+update Medico set em_atividade = 'Férias' where id_medico = 5;
+update Medico set em_atividade = 'Ativo' where id_medico = 6;
+update Medico set em_atividade = 'Ativo' where id_medico = 7;
+update Medico set em_atividade = 'Ativo' where id_medico = 8;
+update Medico set em_atividade = 'Ativo' where id_medico = 9;
+update Medico set em_atividade = 'Ativo' where id_medico = 10;
+update Medico set em_atividade = 'Ativo' where id_medico = 11;
+update Medico set em_atividade = 'Ativo' where id_medico = 12;
+update Medico set em_atividade = 'Ativo' where id_medico = 13;
+update Medico set em_atividade = 'Ativo' where id_medico = 14;
+update Medico set em_atividade = 'Ativo' where id_medico = 15;
+update Medico set em_atividade = 'Ativo' where id_medico = 16;
+update Medico set em_atividade = 'Ativo' where id_medico = 17;
+update Medico set em_atividade = 'Ativo' where id_medico = 18;
+update Medico set em_atividade = 'Ativo' where id_medico = 19;
+update Medico set em_atividade = 'Ativo' where id_medico = 20;
+update Medico set em_atividade = 'Ativo' where id_medico = 21;
+update Medico set em_atividade = 'Ativo' where id_medico = 22;
+
+select * from especialidades;
+select * from medico;
+select * from internacao;
+select * from consulta;
+select * from convenio;
+select * from pacientes;
+select * from receita;
+select * from quarto;
+select * from tipo_quarto;
+
+-- 1- Todos os dados e o valor médio das consultas do ano de 2020 e das que foram feitas sob convênio.
+select avg(valor_consulta) as "Valor médio das consultas" from Consulta where data_consulta like '%2022%';
+select Consulta.*, Convenio.id_empresa_convenio from Consulta
+	inner join Convenio on Convenio.id_convenio = Consulta.id_convenio where data_consulta like '%2022%';
+
+-- 2- Todos os dados das internações que tiveram data de alta maior que a data prevista para a alta.
+select * from internacao where data_alta > data_prevista_alta;
+
+-- 3- Receituário completo da primeira consulta registrada com receituário associado.
+select consulta.id_consulta, receita.* from receita
+	inner join consulta on consulta.id_receita = receita.id_receita where id_consulta = 1;
+
+-- 4- Todos os dados da consulta de maior valor e também da de menor valor (ambas as consultas não foram realizadas sob convênio).
+-- Com convenio
+select * from consulta where valor_consulta = (select min(valor_consulta) from consulta) or valor_consulta = (select max(valor_consulta) from consulta);
+-- Sem convenio
+select * from consulta where valor_consulta = (select min(valor_consulta) from consulta) and id_convenio = null or valor_consulta = (select max(valor_consulta) from consulta) and id_convenio = null;
+
+-- 5- Todos os dados das internações em seus respectivos quartos, calculando o total da internação a partir do valor de diária do quarto e o número de dias entre a entrada e a alta.
+select timestampdiff (day,data_entrada,data_alta) as "Número de dias entre a entrada e a alta" from internacao;
+select internacao.* from internacao
+	inner join quarto on internacao.id_quarto = quarto.id_quarto
+    inner join tipo_quarto on quarto.id_tipo = tipo_quarto.id_tipo;
+
+-- 6- Data, procedimento e número de quarto de internações em quartos do tipo “apartamento”.
+select internacao.* from internacao 
+	inner join quarto on internacao.id_quarto = quarto.id_quarto 
+    inner join tipo_quarto on quarto.id_tipo = tipo_quarto.id_tipo where tipo_quarto.id_tipo = 2;
+
+-- 7- Nome do paciente, data da consulta e especialidade de todas as consultas em que os pacientes eram menores de 18 anos na data da consulta e cuja especialidade não seja “pediatria”, ordenando por data de realização da consulta.
+update Pacientes set data_nascimento_paciente = '2010-10-10' where id_paciente = 1;
+select Pacientes.nome_paciente as "Paciente", (case when pacientes.data_nascimento_paciente > '2004-11-25' then "Menor de idade" else "Adulto" end) as "Data da consulta", medico.nome_medico as "Nome do médico", especialidades.nome_especialidade as "Especialidade do médico" from consulta
+	inner join pacientes on consulta.id_paciente = pacientes.id_paciente
+    inner join medico on consulta.id_medico = medico.id_medico
+    inner join especialidades on medico.id_especialidade = especialidades.id_especialidade order by data_consulta;
+
+-- 8- Nome do paciente, nome do médico, data da internação e procedimentos das internações realizadas por médicos da especialidade “gastroenterologia”, que tenham acontecido em “enfermaria”.
+select consulta.id_consulta, pacientes.nome_paciente as "Paciente", medico.nome_medico as "Nome do médico", internacao.data_entrada as "Data de entrada", procedimento.nome_procedimento as "Procedimento", quarto.id_tipo as "Tipo do quarto" from internacao
+	inner join consulta on internacao.id_consulta = internacao.id_consulta
+    inner join quarto on quarto.id_quarto = internacao.id_quarto
+    inner join pacientes on pacientes.id_paciente = consulta.id_paciente
+    inner join procedimento on internacao.id_procedimento = procedimento.id_procedimento
+    inner join medico on medico.id_medico = consulta.id_medico where id_especialidade = 3 and id_tipo = 1;
+
+-- 9- Os nomes dos médicos, seus CRMs e a quantidade de consultas que cada um realizou
+select consulta.id_consulta, medico.nome_medico, medico.crm_medico from medico
+	inner join consulta on medico.id_medico = consulta.id_medico;
+    
+-- 10- Todos os médicos que tenham "Gabriel" no nome.
+select * from medico where nome_medico like '%Gabriel%';
+
+-- 11- Os nomes, CREs e número de internações de enfermeiros que participaram de mais de uma internação.
+select enfermeiro.* from enfermeiro
+	inner join quarto on enfermeiro.id_enfermeiro = quarto.id_enfermeiro;
